@@ -1,0 +1,344 @@
+/* General Styles */
+body, h1, h2, h3, p, ul, table, form {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles with Animation */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease;
+}
+
+header:hover {
+    padding: 25px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ff7e00;
+}
+
+/* Hero Section with Fade-In Effect */
+.hero {
+    background: url('./1800f.jpg') no-repeat center center/cover;
+    color: rgba(255, 149, 0, 0.979);
+    text-align: center;
+    text-shadow: #333;
+    text-decoration-color: #e06d00;
+    padding: 100px 0;
+    margin-top: 70px;
+    opacity: 0;
+  
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #ff7e00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e06d00;
+    transform: scale(1.1);
+}
+
+/* Section Fade-In Animations */
+section {
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeInSection 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInSection {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.6);
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.how-to-write {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.how-to-write h2 {
+    color: #2c6b2f; /* Green color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.how-to-write ol {
+    padding-left: 20px;
+}
+.how-to-write li {
+    margin-bottom: 20px;
+}
+.how-to-write h3 {
+    color: #2c6b2f; /* Green color */
+}
+.how-to-write p {
+    color: #333;
+}
+.how-to-write .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #2c6b2f; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.how-to-write .btn:hover {
+    background-color: #1a4d1f;
+}
+
+
+/* About Us Section Styles */
+.about-us {
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    padding: 40px 20px; /* Adequate padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-us .container {
+    max-width: 800px; /* Maximum width for readability */
+    margin: 0 auto; /* Center align the content */
+    text-align: center; /* Center align text */
+}
+
+.about-us h1 {
+    font-size: 2.5em; /* Larger font size for the main title */
+    color: #2e8b57; /* Green color matching theme */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.about-us h2 {
+    font-size: 2em; /* Slightly smaller font size for subtitles */
+    color: #333; /* Darker color for subtitles */
+    margin-top: 30px; /* Space above the subtitle */
+    margin-bottom: 20px; /* Space below the subtitle */
+}
+
+.about-us p {
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    color: #666; /* Medium grey color for text */
+    line-height: 1.6; /* Increased line height for better readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+/* How to Write Section Styles */
+.how-to-write {
+    background-color: #fff; /* White background for clarity */
+    padding: 40px 20px; /* Adequate padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 40px; /* Space below the section */
+}
+
+.how-to-write .container {
+    max-width: 800px; /* Maximum width for readability */
+    margin: 0 auto; /* Center align the content */
+}
+
+.how-to-write h2 {
+    font-size: 2.5em; /* Larger font size for the main title */
+    color: #2e8b57; /* Green color matching theme */
+    margin-bottom: 30px; /* Space below the title */
+    text-align: center; /* Center align the title */
+}
+
+.how-to-write ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+.how-to-write li {
+    margin-bottom: 30px; /* Space between steps */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background for steps */
+    border-radius: 8px; /* Rounded corners for steps */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for steps */
+}
+
+.how-to-write h3 {
+    font-size: 1.8em; /* Font size for step titles */
+    color: #333; /* Darker color for step titles */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Space below step titles */
+}
+
+.how-to-write p {
+    font-size: 1.1em; /* Font size for text */
+    color: #666; /* Medium grey color for text */
+    line-height: 1.6; /* Increased line height for better readability */
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.how-to-write .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #2e8b57; /* Green button color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+.how-to-write .btn:hover {
+    background-color: #1e6e4d; /* Darker green on hover */
+}
